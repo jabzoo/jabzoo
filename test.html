@@ -21,7 +21,7 @@
 }
     body {
       text-align: center;
-      background-color: #110022;
+      
       background-size: cover;
       background-position: center;
       font-family:  helvetica;
@@ -48,6 +48,72 @@
       background: red;
       color: white;
     }
+	   }
+        @-webkit-keyframes animation-body {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-body {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+body {
+    fill: #fff;
+    -webkit-animation: animation-button 20000ms infinite;
+    -moz-animation: animation-button 20000ms infinite;
+    -o-animation: animation-button 20000ms infinite;
+    animation: animation-button 20000ms infinite;
+}
+@-webkit-keyframes animation-body {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+@keyframes animation-body {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+
   </style>
 </head>
 <body>
