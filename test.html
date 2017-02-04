@@ -1,146 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>t45esfft</title>
-	<link rel="shortcut icon" href="/icon.png">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
-	<script type="text/javascript" src="jquery.titlealert.js"></script>
-	
-  <style>
-	td {
-    border: 60px solid #110022;
-    border-collapse: collapse;
-}
-	  table {
-    border-radius: 5px;
-    width: 50%;
-    margin: 0px auto;
-    float: none;
-}
-.center {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-}
-    body {
-      text-align: center;
-      
-      background-size: cover;
-      background-position: center;
-      font-family:  helvetica;
-    }
-	  h3{
-		  font-family:  helvetica;
-  		  color:#DDCCEE;
-		  padding-left: 250px;
-		  padding-right: 250px;
-	  }
-    p {
-  font-size:30px;
-  color: white;    
-	  padding-left: 50px;
-	    padding-right: 50px;
-	  }
-    
-    input {
-      border: 0;
-      padding: 10px;
-      font-size: 18px;
-    }
-    input[type="submit"] {
-      background: red;
-      color: white;
-    }
-	   }
-        @-webkit-keyframes animation-body {
-        0% {
-            color: red;
-        }
-        
-        25% {
-            color: yellow;
-        }
-        
-        50% {
-            color: blue;
-        }
-        
-        75% {
-            color: green;
-        }
-        
-        100% {
-            color: red;
-        }
-    }
-    @keyframes animation-body {
-        0% {
-            color: red;
-        }
-        
-        25% {
-            color: yellow;
-        }
-        
-        50% {
-            color: blue;
-        }
-        
-        75% {
-            color: green;
-        }
-        
-        100% {
-            color: red;
-        }
-    }
-	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
-body {
-    fill: #fff;
-    -webkit-animation: animation-button 20000ms infinite;
-    -moz-animation: animation-button 20000ms infinite;
-    -o-animation: animation-button 20000ms infinite;
-    animation: animation-button 20000ms infinite;
-}
-@-webkit-keyframes animation-body {
-    0%   {color:red; }
-    25%  {color:yellow; }
-    50%  {color:blue; }
-    75%  {color:green; }
-    100% {color:red; }
-}
-@keyframes animation-body {
-    0%   {color:red; }
-    25%  {color:yellow; }
-    50%  {color:blue; }
-    75%  {color:green; }
-    100% {color:red; }
-}
-
-  </style>
+	<title>Example page for jQuery-titlealert</title>
 </head>
 <body>
-  <img src="/fit.png">
-	<br>
-	
-	 <table class="table">
-	
-  
-  <tbody>
-    <tr>
-	    <td style="background-color: #110022" width="900px"><img src="/dumbbell.png"><br><br><font color="#ffffff" face="helvetica"><h2><strong>Fat Loss</strong></h2></font></td>
-	    <td style="background-color: #110022" width="900px"><img src="/bed.png"><br><br><font color="#ffffff" face="helvetica"><h2><strong>Relaxation</strong></h2></font></td>
-      
-  </tbody>
-</table>
-	<script>
-$.titleAlert("New chat message!", {
-    requireBlur:false,
-    stopOnFocus:false,
-    duration:4000,
-    interval:700
-});
-	</script>
+
+<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
+<script src="../jquery.titlealert.js"></script>
+
+
+<input type="button" value="default title alert" onclick="$.titleAlert('Flashing with default settings');" />
+<input type="button" value="{interval:200}" onclick="$.titleAlert('Hello World', {interval:200});" />
+<input type="button" value="{duration:3000, stopOnFocus:false}" onclick="$.titleAlert('Hello for 3 seconds', {duration:3000, stopOnFocus:false});" />
+<input type="button" value="{interval:1000, originalTitleInterval:200}" onclick="$.titleAlert('Hello', {interval:1000, originalTitleInterval:200});" />
+<input type="button" value="{stopOnMouseMove:true, stopOnFocus:false}" onclick="$.titleAlert('Stop on mouse move', {stopOnMouseMove:true, stopOnFocus:false});" />
+<input type="button" value="{duration:3000, stopOnMouseMove:true, stopOnFocus:false}" onclick="$.titleAlert('Stop on mouse move', {duration:3000, stopOnMouseMove:true, stopOnFocus:false});" />
+
 </body>
 </html>
