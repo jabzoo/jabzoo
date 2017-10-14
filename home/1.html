@@ -14,14 +14,7 @@
 
 </script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<script>
-	 function ChangebackgroundImage()
-            {
-                var bgArray = ['02.jpg',];
-                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
-                document.body.background = 'http://ajolly2.github.io/images/jumbotron/' + bg;
-            }
-	</script>
+
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://use.fontawesome.com/0003867fec.js"></script>
@@ -37,29 +30,13 @@
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/0003867fec.js"></script>
 	<style>
-		.container {
-    position: absolute;
-    text-align: center;
-    color: white;
-   position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-}
-
-
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.img {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
+		
+		body
+		{ 
+			background-image: url("http://ajolly2.github.io/images/jumbotron/02.jpg");
+			  -webkit-filter: brightness(0.4); /* Safari 6.0 - 9.0 */
+    filter: brightness(0.4);
+		};
 		
 		.center-div
 {
@@ -88,9 +65,9 @@ font-family: 'Lora', serif;
     padding-top: 0px;   
 }
 	
-img {
-    -webkit-filter: brightness(0.4); /* Safari 6.0 - 9.0 */
-    filter: brightness(0.4);
+	img {
+    -webkit-filter: brightness(200%); /* Safari 6.0 - 9.0 */
+    filter: brightness(200%);
 }
 		
 	
@@ -166,19 +143,26 @@ img {
 		
 		<a href="" style="text-decoration: none;"><font color="white" style="text-align: right"><strong>Try it</strong></font></a>
 		-->
-	<div class="container">
-  <img src="http://jolly.fitness/images/jumbotron/02.jpg" style="width:1200px; height: 500px" alt="Norway" style="width:100%;">
+	</div><center>
+		<div class="center-div" style="width: 800px; margin: auto; text-align: center;">
 
-  <div class="centered"><h1 style="font-size:20">movvve exists for people like Angela Davis.  
+<h1 style="color: white;  font-family: Montserrat; font-size: 20;">
+movvve exists for people like Angela Davis.  
 <br /><br />
 Angela works in an office and sits in front of a computer all day.  She doesn’t smoke because “it’s the worst thing you can do for your body.”
 Before movvve, Angela didn't know that just by sitting for much of the day, she was doing the same thing to her body as if she were a smoker.  
 <br /><br />
 <em></b>Sitting for 5 hours a day has the same effect on the body as smoking a pack of cigarettes.</em>
 <br />
-<br /></h1></div>
- 
-</div>
+<br />
+</h1>
+			
+			
+		
+		
+</div><!-- end container -->
+
+	</center>
 	
 <script>
 ChangebackgroundImage()
