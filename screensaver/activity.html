@@ -35,19 +35,7 @@
     Your browser does not support the audio element.
 </audio>
 	<script>
-let delay = 5000;
-
-let timerId = setTimeout(function request() {
-  ...send request...
-
-  if (request failed due to server overload) {
-    // increase the interval to the next run
-    delay *= 2;
-  }
-
-  timerId = setTimeout(request, delay);
-
-}, delay);    /*You have to set below two line*/
+ /*You have to set below two line*/
     // If you want to stop the service, just comment below two lines.
     // You can set any number of minutes in the "window.loopingInterval" 
     // which will cnfirm the alert after each looping..
