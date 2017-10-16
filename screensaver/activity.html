@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
-  <title>act</title>
+  <title>1</title>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,6 +34,13 @@
     <source src="timer_alert.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+	
+	<script>
+function loopingTimerMethod() {
+    setTimeout(function(){ alert("Hello"); }, 3000);
+}
+</script>
+
 	<script>
     /*You have to set below two line*/
     // If you want to stop the service, just comment below two lines.
@@ -230,8 +237,7 @@ font-family: 'Abel', sans-serif;
         <div class="col-md-4"><img src="/jabzoo/workout.gif" height="300" width="300"></div>
 				 
         <div class="col-md-4" style="text-align: left">
-		<a href="#"><i class="fa fa-refresh" aria-hidden="true" style="font-size: 50px; color: black"></i></a>
-		<br />
+<button onclick="loopingTimerMethod()">Try it</button>		<br />
 		 <a class="timer-loop" style="font-size: 50px; color: black;"><span id="timer-minutes">1</span>:<span id="timer-second">00</span></a>
 <br />
 		<font style="font-size: 25px; color: black;"><strong>KNEE HUGS</strong></font>
