@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel=icon href=/favicon-circle-o-notch.ico>
-  <title>31</title>
+  <title>2</title>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -15,14 +15,7 @@
 </script>
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One" />
 <link href="https://fonts.googleapis.com/css?family=Lora:700i|Abel|Dosis:200" rel="stylesheet">
-<script>
-	 function ChangebackgroundImage()
-            {
-                var bgArray = ['123.jpeg', '122.jpeg', '121.jpeg', '118.jpeg', '119.jpeg', '120.jpeg', '113.jpeg', '111.jpeg', '112.jpeg', '114.jpeg', '115.jpeg', '116.jpeg', '117.jpeg', '110.jpeg', '107.jpeg', '109.jpeg', '108.jpeg', '100.jpeg',  '101.jpeg', '102.jpeg', '103.jpeg', '104.jpeg', '105.jpeg', '106.jpeg',];
-                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
-                document.body.background = 'http://jabzoo.github.io/jabzoo/images/jumbotron/' + bg;
-            }
-	</script>
+
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://use.fontawesome.com/0003867fec.js"></script>
@@ -37,71 +30,10 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/0003867fec.js"></script>
-  <audio style="hidden" id="myLoopingAudioPlayer">
-    <source src="/jabzoo/timer_alert.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-	<script>
-    /*You have to set below two line*/
-    // If you want to stop the service, just comment below two lines.
-    // You can set any number of minutes in the "window.loopingInterval" 
-    // which will cnfirm the alert after each looping..
-    // You should not anything change in the "setInterval(loopingTimerMethod, 1000);"
-    // Because It is doing everthing.
-    window.loopingInterval = 20;
-    setInterval(loopingTimerMethod, 1000);
-    //////////////////////
-
-
-
-
-
-    /*START: Core functionality.. shold not be changed.. Else may not work*/
-    window.secondStart = 60;
-    window.loopingMinutes = loopingInterval - 1;
-    window.loopingSecond = secondStart;
-    function loopingStartTime(tim) {
-        var i = tim - 1;
-        return i;
-    }
-    function loopingTimerMethod()
-    {
-        loopingSecond = loopingStartTime(loopingSecond);
-        document.getElementById("timer-minutes").innerHTML = timeWithZero(loopingMinutes);
-        document.getElementById("timer-second").innerHTML = timeWithZero(loopingSecond);
-        if (loopingSecond == 0) {
-            if (loopingMinutes == 0 && loopingSecond == 0) {
-                var x = document.getElementById("myLoopingAudioPlayer");
-                LoopingPlayAudio(x);
-                window.loopingMinutes = loopingInterval;
-            }
-
-
-            loopingMinutes = loopingMinutes - 1;
-            loopingSecond = secondStart;
-        }
-
-    }
-
-    function LoopingPlayAudio(x) {
-        x.play();
-    }
-
-    function LoopingPauseAudio(x) {
-        x.pause();
-    }
-
-    function timeWithZero(i) {
-        if (i < 10) {
-            i = "0" + i
-        }
-        ;  // add zero in front of numbers < 10
-        return i;
-    }
-    /*END Timer Looping functionality*/
-</script>
+  
 
 	<style>
+		
 		h1 {
 	font-family: "Paytone One";
 	font-size: 41px;
@@ -205,7 +137,7 @@ font-family: 'Abel', sans-serif;
 
 </head>
 	
-<body style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%">
+<body bgcolor="#f26157">
 	<div class="container-fluid">
  
 		<br />
