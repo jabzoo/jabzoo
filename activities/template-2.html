@@ -31,16 +31,9 @@
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/0003867fec.js"></script>
 	<audio style="hidden" id="myLoopingAudioPlayer">
-    <source src="/jabzoo/waterdrop.mp3" type="audio/mpeg">
+    <source src="/jabzoo/timer_alert.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-	
-	<script>
-function loopingTimerMethod() {
-    setTimeout(function(){ alert("Hello"); }, 3000);
-}
-</script>
-
 	<script>
     /*You have to set below two line*/
     // If you want to stop the service, just comment below two lines.
@@ -51,11 +44,6 @@ function loopingTimerMethod() {
     window.loopingInterval = 1;
     setInterval(loopingTimerMethod, 1000);
     //////////////////////
-
-
-
-
-
     /*START: Core functionality.. shold not be changed.. Else may not work*/
     window.secondStart = 60;
     window.loopingMinutes = loopingInterval - 1;
@@ -75,22 +63,16 @@ function loopingTimerMethod() {
                 LoopingPlayAudio(x);
                 window.loopingMinutes = loopingInterval;
             }
-
-
             loopingMinutes = loopingMinutes - 1;
             loopingSecond = secondStart;
         }
-
     }
-
     function LoopingPlayAudio(x) {
         x.play();
     }
-
     function LoopingPauseAudio(x) {
         x.pause();
     }
-
     function timeWithZero(i) {
         if (i < 10) {
             i = "0" + i
