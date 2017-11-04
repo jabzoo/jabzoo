@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>m o v v v e</title>
-		<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
 
-<script>
-	 function ChangebackgroundImage()
-            {
-                var bgArray = ['123.jpeg', '122.jpeg', '121.jpeg', '118.jpeg', '119.jpeg', '120.jpeg', '113.jpeg', '111.jpeg', '112.jpeg', '114.jpeg', '115.jpeg', '116.jpeg', '117.jpeg', '110.jpeg', '107.jpeg', '109.jpeg', '108.jpeg', '100.jpeg',  '101.jpeg', '102.jpeg', '103.jpeg', '104.jpeg', '105.jpeg', '106.jpeg',];
-                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
-                document.body.background = 'https://jabzoo.github.io/jabzoo/images/jumbotron/' + bg;
-            }
-	</script>
 <script src="https://use.fontawesome.com/0003867fec.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -24,58 +14,6 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/0003867fec.js"></script>
-	<audio style="hidden" id="myLoopingAudioPlayer">
-    <source src="http://newt.phys.unsw.edu.au/music/bellplates/sounds/bellplate2modes.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-	<script>
-    /*You have to set below two line*/
-    // If you want to stop the service, just comment below two lines.
-    // You can set any number of minutes in the "window.loopingInterval" 
-    // which will cnfirm the alert after each looping..
-    // You should not anything change in the "setInterval(loopingTimerMethod, 1000);"
-    // Because It is doing everthing.
-    window.loopingInterval = 20;
-    setInterval(loopingTimerMethod, 1000);
-    //////////////////////
-    /*START: Core functionality.. shold not be changed.. Else may not work*/
-    window.secondStart = 60;
-    window.loopingMinutes = loopingInterval - 1;
-    window.loopingSecond = secondStart;
-    function loopingStartTime(tim) {
-        var i = tim - 1;
-        return i;
-    }
-    function loopingTimerMethod()
-    {
-        loopingSecond = loopingStartTime(loopingSecond);
-        document.getElementById("timer-minutes").innerHTML = timeWithZero(loopingMinutes);
-        document.getElementById("timer-second").innerHTML = timeWithZero(loopingSecond);
-        if (loopingSecond == 0) {
-            if (loopingMinutes == 0 && loopingSecond == 0) {
-                var x = document.getElementById("myLoopingAudioPlayer");
-                LoopingPlayAudio(x);
-                window.loopingMinutes = loopingInterval;
-            }
-            loopingMinutes = loopingMinutes - 1;
-            loopingSecond = secondStart;
-        }
-    }
-    function LoopingPlayAudio(x) {
-        x.play();
-    }
-    function LoopingPauseAudio(x) {
-        x.pause();
-    }
-    function timeWithZero(i) {
-        if (i < 10) {
-            i = "0" + i
-        }
-        ;  // add zero in front of numbers < 10
-        return i;
-    }
-    /*END Timer Looping functionality*/
-</script>
 <link href="https://fonts.googleapis.com/css?family=Abel|Dosis:200" rel="stylesheet">
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96338653-1"></script>
@@ -113,6 +51,30 @@ html {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+.flex-container {
+	border-radius: 10px;
+    width: 440px;
+    min-height: 240px;
+    background-color: white;
+    box-shadow: 0 0 1em #888888;
+   vertical-align: middle;
+    position: relative;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.flex-item {
+  
+    border-radius: 8px 8px 0px 0px;
+    width: 100%;
+    height: 70px;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    color: white;
 }
 .menu li {
     padding: 8px;
@@ -161,7 +123,7 @@ html {
 }
 </style>
 </head>
-<body style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%; overflow: hidden">
+<body style="background-color: #f26157">
 
 <div class="header">
 
@@ -185,15 +147,41 @@ html {
 </div>
 
 <div class="col-6" style="padding: 40px; margin: 10px;">
-<center style="top: 50%">
-	<font style="font-family: Abel; color: white; font-size: 18px;">. . . for maximum productivity and to meet minimum physical activity requirements, 
-		take a break every 20 minutes.  Once the timer reaches 00:00, 
-		an alarm signals you to get up and &nbsp;m&nbsp;o&nbsp;v&nbsp;v&nbsp;v&nbsp;e&nbsp;:</font>
+<center>
+   
+   <font style="font-family: Abel; color: white; font-size: 18px;">Getting off your butt while you work helps you feel more energized and improves productivity by about 30%.  
+	But activity is only one part of health.  For free nuggets of health and fitness wisdom, each less than a minute of reading time and packed with the most current, myth-free, research-based exercise and nutrition science that will help you feel and look better and be healthier, sign up below.  Here’s a sample of what you get...</font>
+		<p>
+			<br />
+			<div class="flex-container" style="font-family: Abel; font-size: 18px">
+			<div class="flex-item" style="color: #444444; padding: 24px;"><h1>Nutrition</h1></div> 
+  <div style="padding: 30px 20px 30px 20px">
+	  <font  style="color: #444444">Carbs do <em>not</em> make you fat.  <em>Any</em> macronutrient in excess--whether carbs, proteins, or fats--<em>can</em> increase fat storage, but only if
+		  you eat the wrong way.  In fact, carbs are the macronutrient your body <strong>requires</strong> the most of.  Want to know how and why?  Register here:  </font>
+<br />
 
-	<br /><br />
-    <div class="inner"><span class="timer-loop"><span id="timer-minutes" style="font-size: 200px; font-family: Dosis; color: white; text-decoration: none">20</span><font  style="font-size: 200px;font-family: Dosis; color: white">:</font><span id="timer-second" style="font-size: 200px;font-family:Dosis; color: white">00</span></a>
-<br /><br />
-	    	            <a href="http://jabzoo.github.io/jabzoo/howitworks/education.html" class="btn btn-default btn-lg btn-huge" style="border: none; background: white;"><font face="Abel">&nbsp;&nbsp;Next&nbsp;&nbsp;</font></a>
+				</div>
+                
+
+</div>
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup" style="background-color: none; background: transparent">
+<form action="https://movvve.us17.list-manage.com/subscribe/post?u=9cc50a2b765e84e25aa84291d&amp;id=dc7f88755c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9cc50a2b765e84e25aa84291d_dc7f88755c" tabindex="-1" value="" style="background-color: none"></div>
+    <div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: white; color: #444444"></div>
+    </div>
+</form>
+	<br />
+		<u><a href="https://jabzoo.github.io/jabzoo/activity1office.html" style="color: #444444">No, thanks.  I just want to be more productive and feel better at work.</a></u>
 
 </div>
 </center>
@@ -207,14 +195,12 @@ html {
 
 </div>
 
+<div class="footer">
+
+</div>
 
 <script>
     ChangebackgroundImage()
-</script>
-<script>
-    setTimeout(function(){
-       window.location.href = 'http://jabzoo.github.io/jabzoo/howitworks/education.html'
-    }, 1201000);
 </script>
 </body>
 </html>
