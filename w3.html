@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>m o v v v e</title>
-	    <link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
+	<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
 <script src="https://use.fontawesome.com/0003867fec.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -16,14 +16,67 @@
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/0003867fec.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-<script>
-	 function ChangebackgroundImage()
-            {
-                var bgArray = ['123.jpeg', '122.jpeg', '121.jpeg', '118.jpeg', '119.jpeg', '120.jpeg', '113.jpeg', '111.jpeg', '112.jpeg', '114.jpeg', '115.jpeg', '116.jpeg', '117.jpeg', '110.jpeg', '107.jpeg', '109.jpeg', '108.jpeg', '100.jpeg',  '101.jpeg', '102.jpeg', '103.jpeg', '104.jpeg', '105.jpeg', '106.jpeg',];
-                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
-                document.body.background = 'http://jabzoo.github.io/jabzoo/images/jumbotron/' + bg;
+	 <audio style="hidden" id="myLoopingAudioPlayer">
+        <source src="http://cd.textfiles.com/itcontinues/GAMES/CASINO/WAV/BJDEAL.WAV" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        /*You have to set below two line*/
+        // If you want to stop the service, just comment below two lines.
+        // You can set any number of minutes in the "window.loopingInterval"
+        // which will cnfirm the alert after each looping..
+        // You should not anything change in the "setInterval(loopingTimerMethod, 1000);"
+        // Because It is doing everthing.
+        window.loopingInterval = 1;
+        var ReloadVal = 0;
+        ReloadValInterset = setInterval(function(){
+            ReloadVal = ReloadVal + 1;
+            console.log(ReloadVal);
+            if(ReloadVal == 10){
+                clearInterval(ReloadValInterset);
+                setInterval(loopingTimerMethod, 1000);
             }
-	</script>
+        }, 1000);
+        //////////////////////
+        /*START: Core functionality.. shold not be changed.. Else may not work*/
+        window.secondStart = 60;
+        window.loopingMinutes = loopingInterval - 1;
+        window.loopingSecond = secondStart;
+        function loopingStartTime(tim) {
+            var i = tim - 1;
+            return i;
+        }
+        function loopingTimerMethod()
+        {
+            loopingSecond = loopingStartTime(loopingSecond);
+            document.getElementById("timer-minutes").innerHTML = timeWithZero(loopingMinutes);
+            document.getElementById("timer-second").innerHTML = timeWithZero(loopingSecond);
+            if (loopingSecond == 0) {
+                if (loopingMinutes == 0 && loopingSecond == 0) {
+                    var x = document.getElementById("myLoopingAudioPlayer");
+                    LoopingPlayAudio(x);
+                    window.loopingMinutes = loopingInterval;
+                }
+                loopingMinutes = loopingMinutes - 1;
+                loopingSecond = secondStart;
+            }
+        }
+        function LoopingPlayAudio(x) {
+            x.play();
+        }
+        function LoopingPauseAudio(x) {
+            x.pause();
+        }
+        function timeWithZero(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            ;  // add zero in front of numbers < 10
+            return i;
+        }
+        /*END Timer Looping functionality*/
+    </script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96338653-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -83,7 +136,8 @@ html {
     color: #ffffff;
     text-align: center;
     font-size: 12px;
-    padding: 15px;
+    padding: 20px;
+	margin: 20px;
 }
 /* For desktop: */
 .col-1 {width: 8.33%;}
@@ -110,9 +164,16 @@ html {
 <body style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%; overflow: hidden">
 
 <div class="header">
-  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: white; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="white" style="text-align: right; text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		
+
+  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: black; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="black" style="text-align: right; text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<font style="font-size: 10px"><a href="https://jabzoo.github.io/jabzoo/activity1home" style="text-decoration: none; color: #DCDCDC">HOME</a></font>&nbsp;&nbsp;<font style="font-size: 10px; color: #110022">OFFICE</font>
+	</div>	
+   
+    </div>
+ 
+    
 </div>
 
 <div class="row">
@@ -125,43 +186,42 @@ html {
 
 <div class="col-6" style="padding: 40px;">
 <center>
-<br /><br /><br /><br />
-<font style="font-size: 30px; color: white; font-family: Abel">
-        <strong>
-<a href="https://jabzoo.github.io/jabzoo/home/references.html" target="_blank" style="text-decoration: none; color: white">Physical inactivity is the #1 cause of chronic disease and early death.</a>        </strong></font>
+
+<img src="https://jabzoo.github.io/jabzoo/workouts.gif" style="border: 10px solid blue"><br />
+Brief line of explanation
 <br /><br />
- <font style="font-size: 20px; color: white; font-family: Abel">
-Solution:  Split up long periods of sitting or standing with brief activity breaks to keep you healthy <em>and</em> more productive at work. 			
-			</font>
-            
-		<br /><br /><br />
-       <div class="row">
-	       <div class="col-6" style="text-align: center">
-		       
-    <a href="https://jabzoo.github.io/jabzoo/howitworks/activity.html" class="btn btn-default btn-lg btn-huge" style="border: none; background: white;"><font face="Abel">&nbsp;&nbsp;This is my first time&nbsp;&nbsp;</font></a>
-	       </div>
-	         <div class="col-6" style="text-align: center">
-		       <a href="https://jabzoo.github.io/jabzoo/activity1office.html" class="btn btn-default btn-lg btn-huge" style="border: none; background: white;"><font face="Abel">&nbsp;&nbsp;I've been here before&nbsp;&nbsp;</font></a>
-	       </div>
-	</div>
-	<br /><br />
-        </center>
+                <a href="https://jabzoo.github.io/jabzoo/activities/activity.html"><i class="glyphicon glyphicon-repeat" style="font-size: 15; color: #110022"></i></a>
+
+</center>
 </div>
 
 <div class="col-3 right">
   <div class="aside">
-  
+
   </div>
 </div>
 
 </div>
 
-<div class="footer">
- 
-</div>
+<div class="footer" style="padding: 40px">
+<font style="color: black"><p align="right">
 
+   &nbsp;&nbsp;&nbsp;<span class="timer-loop" style="font-size: 50px; color: #110022; font-family: Abel"><span id="timer-minutes">1</span>:<span id="timer-second">00</span></a>
+    <br />
+
+
+</p>
+
+</div>
+<br />
+	<div></div>
 <script>
     ChangebackgroundImage()
+</script>
+	<script>
+    setTimeout(function(){
+       window.location.href = 'http://jabzoo.github.io/jabzoo/timer1office.html';
+    }, 71000);
 </script>
 </body>
 </html>
