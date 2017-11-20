@@ -1,17 +1,135 @@
+<!DOCTYPE html>
 <html>
 <head>
+  <title>m o v v v e</title>
+		<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://use.fontawesome.com/0003867fec.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!--<script>
+	 function ChangebackgroundImage()
+            {
+                var bgArray = ['workouts.gif',];
+                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+                document.body.background = 'http://jabzoo.github.io/jabzoo/' + bg;
+            }
+	</script>-->
+	
 <style>
-#test {
-	width: 1100px;
-	padding: 40px;
-	background: #c14545;
+body{
+background-size: 100vh 100vw;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+-moz-background-size:cover;
+-webkit-background-size: cover;
+overflow: scroll;
+background-image: url("workouts.gif");
+
+}
+	  
+	
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+.center {
+	border-radius: 0px;
+    width: 95%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 0 6em black;
+	opacity: 0.9;
+    position: relative;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+	#test {
+	width: 90%;
+	height: 90%;
+	padding: 2em 0;
+	background: none;
 	visibility: hidden;
-  margin: 0 auto;
+		 margin: 0 auto;
   position: relative;
-  top: -10px;
-  background: blue;
-  opacity: 0.8;
-	overflow: scroll;
+		top: -30px;
 }
 
 .slideDown{
@@ -68,75 +186,51 @@
 		-webkit-transform: translateY(0%);
 	}	
 }
+	
 
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-    .col-m-1 {width: 8.33%;}
-    .col-m-2 {width: 16.66%;}
-    .col-m-3 {width: 25%;}
-    .col-m-4 {width: 33.33%;}
-    .col-m-5 {width: 41.66%;}
-    .col-m-6 {width: 50%;}
-    .col-m-7 {width: 58.33%;}
-    .col-m-8 {width: 66.66%;}
-    .col-m-9 {width: 75%;}
-    .col-m-10 {width: 83.33%;}
-    .col-m-11 {width: 91.66%;}
-    .col-m-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
 </style>
-
-<script>
-	document.addEventListener('DOMContentLoaded', function() {
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
   setTimeout(function() {
     document.getElementById('test').className = 'slideDown';
-  }, 500);
-}, false);
- </script>
-	
+  }, 3500);
+		}, false);
+	</script>
 </head>
-	
 <body>
 
-<div id="test">
-  <div class="row" style="text-align: center">
-    m o v v v e
-  </div>
-  <br />
-  <div class="row" style="text-align: center">
-    <div class="col-m-6">
-      left
-    </div>
-    <div class="col-m-6">
-      right
-    </div>
-  </div>
-  
+	<div id="test">
+<div class="center">
+<br />
+<div style="padding: 40px; text-align: center">
+	<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: #828280; font-size: 2em;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="#828180" style="text-decoration: none"; size="6em">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 	
+<div class="row" style="padding: 40px; position: relative; overflow: hidden">
 	
+	<div class="col-6" style="padding: 20px 50px 20px 50px; overflow: hidden">
+		<h1 style="font-family: Abel">Here for <font style="color: #f26157;">productivity</font>?</h1>
+  <p>Increase productivity by as much as 30% by structuring your work around activity breaks.  Work uninterrupted on the task at hand for 20 minutes, then take a 60-second break.  Brief activity breaks jumpstart cerebral blood flow to boost your energy, focus, creativity, and brain function.</p>
+</div>
+	
+<div class="col-6" style="padding: 20px 50px 20px 50px; border-left: 1px solid gray; overflow: hidden">
+	<h1 style="font-family: Abel">Or your <font style="color: #0087d6">health</font>?</h1>
+	<p>Physical inactivity--seated <em>or</em> standing--is the #1 cause of chronic disease and early death.  One hour of inactivity has the same effect on you as smoking two cigarettes.  Exercise and healthy eating cannot reverse these effects.  But taking short activity breaks every 20 minutes lowers your risk of all chronic disease and makes you feel better.</p>
+</div>
+</div>
+	<div class="row" style="padding: 40px; position: relative; overflow: hidden; text-align: center; overflow: hidden">
+<a href="https://jabzoo.github.io/jabzoo/activity1office.html" class="btn btn-default btn-transparent" style="padding: 50px 18px">Get started</a>
+	<br />
+		<br />
+	</div>
 
+</div>
+		</div>
+	<!--
+<script>
+ChangebackgroundImage()
+</script>-->
 	
-	
-</body>	
-	
+</body>
 </html>
