@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>m o v v v e</title>
-	    <link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
+  <title>3m o v v v e</title>
+		<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://use.fontawesome.com/0003867fec.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/0003867fec.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-<script>
+	<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script>
 	 function ChangebackgroundImage()
             {
                 var bgArray = ['workouts.gif',];
@@ -24,17 +20,8 @@
                 document.body.background = 'http://jabzoo.github.io/jabzoo/' + bg;
             }
 	</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96338653-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-96338653-1');
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 <style>
-
 * {
     box-sizing: border-box;
 }
@@ -51,7 +38,7 @@ html {
     font-family: "Lucida Sans", sans-serif;
 }
 .header {
-    background-color: none;
+    background-color: #9933cc;
     color: #ffffff;
     padding: 15px;
 }
@@ -71,15 +58,15 @@ html {
     background-color: #0099cc;
 }
 .aside {
-    background-color: none;
+    background-color: #33b5e5;
     padding: 15px;
     color: #ffffff;
     text-align: center;
     font-size: 14px;
-    box-shadow: 0 0px 0px rgba(0,0,0,0), 0 0px 0px rgba(0,0,0,0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .footer {
-    background-color: none;
+    background-color: #0099cc;
     color: #ffffff;
     text-align: center;
     font-size: 12px;
@@ -105,43 +92,124 @@ html {
         width: 100%;
     }
 }
+
+.center {
+	border-radius: 0px;
+    width: 95vw;
+    height: 90vh;
+    background-color: white;
+    box-shadow: 0 0 6em black;
+	opacity: 0.9;
+    position: relative;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+	#test {
+	width: 200px;
+	padding: 2em 0;
+	background: none;
+	visibility: hidden;
+	margin: 0 auto;
+}
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
 </style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('test').className = 'slideDown';
+  }, 3500);
+		}, false);
+	</script>
 </head>
 <body style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%; overflow: hidden">
 
-<div class="header">
-  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: white; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="white" style="text-align: right; text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		
+	<div id="test">
+<div class="center">
+<div class="row" style="padding: 40px; position: relative; overflow: hidden; text-align: center">
+	<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: #48304D; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="#48304D" style="text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
-
-<div class="row">
-
-<div class="col-3 menu">
-  <ul>
-    
-  </ul>
+	
+<div class="row" style="padding: 40px; position: relative; overflow: hidden">
+	
+	<div class="col-6" style="padding: 20px 50px 20px 70px; height: 200px;">
+		<h1 style="font-family: Abel">Are you here for <font style="color: #f26157;">productivity</font>?</h1>
+  <p>Increase productivity by as much as 30% by structuring your work around activity breaks.  Work uninterrupted on the task at hand for 20 minutes, then take a 60-second break.  Brief activity breaks jumpstart cerebral blood flow to boost your energy, focus, creativity, and brain function.</p>
 </div>
-
-<div class="col-6" style="padding: 40px;">
-
-        </center>
+	
+<div class="col-6" style="padding: 20px 50px 20px 50px; height: 200px; border-left: 1px solid gray;">
+	<h1 style="font-family: Abel">Or for your <font style="color: #0087d6">health</font>?</h1>
+	<p>Physical inactivity--seated <em>or</em> standing--is the #1 cause of chronic disease and early death.  One hour of inactivity has the same effect on you as smoking two cigarettes.  Exercise and healthy eating cannot reverse these effects.  But taking short activity breaks every 20 minutes lowers your risk of all chronic disease and makes you feel better.</p>
 </div>
-
-<div class="col-3 right">
-  <div class="aside">
-  
-  </div>
 </div>
+	<div class="row" style="padding: 40px; position: relative; overflow: hidden; text-align: center">
+<a href="https://jabzoo.github.io/jabzoo/activity1office.html" class="btn btn-default btn-transparent" style="padding: 50px 18px">Get active</a>
+	</div>
 
 </div>
-
-<div class="footer">
- 
-</div>
-
+		</div>
+	
 <script>
-    ChangebackgroundImage()
+ChangebackgroundImage()
 </script>
+	
 </body>
 </html>
