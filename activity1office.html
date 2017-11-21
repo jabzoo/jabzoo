@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>love</title>
+	<title>good</title>
 	<script>
 	
            
@@ -95,6 +95,13 @@
 
   gtag('config', 'UA-96338653-1');
 </script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('test').className = 'slideDown';
+  }, 200);
+		}, false);
+	</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
@@ -169,63 +176,101 @@ html {
         width: 100%;
     }
 }
+	#test {
+	width: 400px;
+	padding: 40px;
+	background: none;
+	visibility: hidden;
+  opacity: 0.0;
+}
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
 </style>
 </head>
 <body style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%; overflow: hidden">
 
-<div class="header">
+<div id="test">
+<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: white; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="white" style="text-align: right; text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 	<font style="font-size: 10px"><a href="https://jabzoo.github.io/jabzoo/activity1home" style="text-decoration: none; color: #110022">HOME</a></font>&nbsp;&nbsp;<font style="font-size: 10px; color: #110022"><u>OFFICE</u></font>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Squat:
+  <span class="timer-loop" style="font-size: 50px; color: #110022; font-family: Abel"><span id="timer-minutes">1</span>:<span id="timer-second">00</span></a><br />
 
-  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: black; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="black" style="text-align: right; text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<font style="font-size: 10px"><a href="https://jabzoo.github.io/jabzoo/activity1home" style="text-decoration: none; color: #110022">HOME</a></font>&nbsp;&nbsp;<font style="font-size: 10px; color: #110022"><u>OFFICE</u></font>
-	</div>	
-   
-    </div>
  
-    
-</div>
 
-<div class="row">
-
-<div class="col-3 menu">
-  <ul>
-    
-  </ul>
-</div>
-
-<div class="col-6" style="padding: 40px;">
-<center>
-
-
-
-</center>
-</div>
-
-<div class="col-3 right">
-  <div class="aside">
-
-  </div>
-</div>
-
-</div>
-
-<div class="footer" style="padding: 40px">
-<font style="color: black"><p align="right">
-
-   &nbsp;&nbsp;&nbsp;<span class="timer-loop" style="font-size: 50px; color: #110022; font-family: Abel"><span id="timer-minutes">1</span>:<span id="timer-second">00</span></a>
-    <br />
-	<font style="font-family: Abel; font-size: 15px; color: #110022">high knees</font>
+   
+	
 	<br />
 <a href="https://jabzoo.github.io/jabzoo/activities/activity.html"><i class="glyphicon glyphicon-repeat" style="font-size: 15px; color: #110022"></i></a>
 
 
-
-</p>
-
+  
+  
 </div>
-<br />
-	<div></div>
 <script>
     ChangebackgroundImage()
 </script>
