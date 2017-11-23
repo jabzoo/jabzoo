@@ -2,6 +2,16 @@
 <html>
 <head>
 	<title>m o v v v e</title>
+	<script>
+	
+           
+	 function ChangebackgroundImage()
+            {
+                var bgArray = ['11g.gif', '12g.gif', '13g.gif',];
+                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+                document.body.background = 'https://jabzoo.github.io/jabzoo/images/jumbotron/' + bg;
+            }
+	</script>
 	<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
 <script src="https://use.fontawesome.com/0003867fec.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -85,8 +95,21 @@
 
   gtag('config', 'UA-96338653-1');
 </script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('test').className = 'slideDown';
+  }, 200);
+		}, false);
+	</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+	body {
+	background-size: cover;
+		background-repeat: no-repeat; 
+		background-attachment: fixed; 
+		background-position: center center
+	}
 
 * {
     box-sizing: border-box;
@@ -136,8 +159,8 @@ html {
     color: #ffffff;
     text-align: center;
     font-size: 12px;
-    padding: 20px;
-	margin: 20px;
+    padding: 15px;
+
 }
 /* For desktop: */
 .col-1 {width: 8.33%;}
@@ -159,68 +182,99 @@ html {
         width: 100%;
     }
 }
+	#test {
+	width: 400px;
+	padding: 40px;
+	background: none;
+	visibility: hidden;
+}
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
 </style>
 </head>
-<body style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%; overflow: hidden">
-
-<div class="header">
-
-  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: black; font-size: 35px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="black" style="text-align: right; text-decoration: none"; size="7">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <font style="font-size: 10px; color: #110022">HOME</font>&nbsp;&nbsp;<font style="font-size: 10px"><a href="https://jabzoo.github.io/jabzoo/activity3office" style="text-decoration: none; color: #DCDCDC">OFFICE</a></font>
-	</div>	
-   
-    </div>
- 
-    
-</div>
-
+<body>
+	<div class="footer">
 <div class="row">
-
-<div class="col-3 menu">
-  <ul>
-    
-  </ul>
-</div>
-
-<div class="col-6" style="padding: 40px;">
-<center>
-
-<img src="https://jabzoo.github.io/jabzoo/workout.gif"><br />
-Brief line of explanation
-<br /><br />
-                <a href="https://jabzoo.github.io/jabzoo/activities/activity.html"><i class="glyphicon glyphicon-repeat" style="font-size: 15; color: #110022"></i></a>
-
-</center>
-</div>
-
-<div class="col-3 right">
-  <div class="aside">
+	<div class="col-1"></div>
+<div class="col-4" style="text-align: center">
+  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: white; font-size: 24px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="white" style="text-align: right; text-decoration: none; font-size: 24px;">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+  </div>
+	<div class="col-1"></div>
+  
+  <div class="col-2" style="text-align: center; border-right: 1px solid">
+  <a href="https://jabzoo.github.io/jabzoo/activity1office.html"><i class="glyphicon glyphicon-repeat" style="font-size: 24px; color: white"></i></a>
+  </div>
+   <div class="col-2" style="text-align: center; border-right: 1px solid">
+    <span class="timer-loop" style="font-size: 24px; color: white; font-family: Abel"><span id="timer-minutes"><strong>1</strong></span><strong>:</strong><span id="timer-second"><strong>00</strong></span></a><br />
 
   </div>
-</div>
-
-</div>
-
-<div class="footer" style="padding: 40px">
-<font style="color: black"><p align="right">
-
-   &nbsp;&nbsp;&nbsp;<span class="timer-loop" style="font-size: 50px; color: #110022; font-family: Abel"><span id="timer-minutes">1</span>:<span id="timer-second">00</span></a>
-    <br />
+   <div class="col-2" style="text-align: center;">
+  <font style="font-size: 24px; color: white; font-family: Abel">twist</font>
+  </div>
+  </div>
 
 
-</p>
-
-</div>
-<br />
-	<div></div>
 <script>
     ChangebackgroundImage()
 </script>
 	<script>
     setTimeout(function(){
-       window.location.href = 'http://jabzoo.github.io/jabzoo/timer3home.html';
+       window.location.href = 'https://jabzoo.github.io/jabzoo/timer3home.html';
     }, 71000);
 </script>
 </body>
