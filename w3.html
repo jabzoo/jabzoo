@@ -22,53 +22,15 @@
 	</script>-->
 	
 <style>
-.scroll-left {
- height: 50px;	
- overflow: hidden;
- position: relative;
-}
-.scroll-left p {
- position: absolute;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 50px;
- text-align: center;
- /* Starting position */
- -moz-transform:translateX(100%);
- -webkit-transform:translateX(100%);	
- transform:translateX(100%);
- /* Apply animation to this element */	
- -moz-animation: scroll-left 10s linear infinite;
- -webkit-animation: scroll-left 10s linear infinite;
- animation: scroll-left 10s linear infinite;
-}
-/* Move it (define the animation) */
-@-moz-keyframes scroll-left {
- 0%   { -moz-transform: translateX(100%); }
- 100% { -moz-transform: translateX(-100%); }
-}
-@-webkit-keyframes scroll-left {
- 0%   { -webkit-transform: translateX(100%); }
- 100% { -webkit-transform: translateX(-100%); }
-}
-@keyframes scroll-left {
- 0%   { 
- -moz-transform: translateX(100%); /* Browser bug fix */
- -webkit-transform: translateX(100%); /* Browser bug fix */
- transform: translateX(100%); 		
- }
- 100% { 
- -moz-transform: translateX(-100%); /* Browser bug fix */
- -webkit-transform: translateX(-100%); /* Browser bug fix */
- transform: translateX(-100%); 
- }
+.GeneratedMarquee {
+font-family:Helvetica, sans-serif;
+line-height:1.3em;
+color:white;
+font-size: 40px;
+padding:0em;
+
 }
 
-
-
-
-	
 body{
 background-size: 100vh 100vw;
 background-repeat: no-repeat;
@@ -264,17 +226,12 @@ html {
 </div>
 	
 <div class="col-6" style="padding: 20px 50px 20px 50px; border-left: 1px solid gray; overflow: hidden">
-	So I did more research, and it turns out there's a lot of science on this:  Physical inactivity--seated or standing--is the #1 cause of chronic disease and early death. One hour of inactivity has the same effect on you as smoking two cigarettes.  If you're inactive for more than a few hours a day, you're cutting about 2 years off your life. But taking short activity breaks every 20 minutes lowers your risk of all chronic disease, reduces the instances of common illness, helps you lose weight, and makes you feel better. (Here are my sources.)
-
-And it turns out there an unintended benefits of moving while you work:   Brief activity breaks jumpstart cerebral blood flow to boost your energy, focus, creativity, mental alertness and clarity, critical thinking skills, and overall brain function. You will increase your productivity by as much as 30% when you structure your work around activity breaks.  Physical inactivity is the #1 contributing factor for 75% of your healthcare costs.  A sedentary worker costs an employer (or yourself if you work on your own) an average of $4,500 per year in healthcare and lost productivity.
 </div>
 
 <div class="col-3" style="padding: 20px 50px 20px 50px; border-left: 1px solid gray; overflow: hidden">
-	Ive experienced all these Because I got my blood flowing, I no longer felt malaise/exhaustion after hours of work at my computer.  I felt better, had more energy, no headaches, no aches.  I was also much more productive and efficient at my work.
 
 Work uninterrupted on the task at hand for 20 minutes, then take a 60-second break. 
 
-I'm also a Certified Personal Trainer and a coding hobbyist, so I created movvve to help others like me.  I hope movvve gives you as many benefits as it gives me.  If you have any questions or comments, please feel free to reach me at ajolly2@gmail.com.
 	
 </div>
 </div>
@@ -285,9 +242,7 @@ I'm also a Certified Personal Trainer and a coding hobbyist, so I created movvve
 	</div>
 
 </div>
-		<div class="scroll-left">
-<p>CSS scrolling text... </p>
-</div>
+		<marquee class="GeneratedMarquee" direction="left" scrollamount="6" behavior="scroll">This is the information you need to know.</marquee>
 		</div>
 	<!--
 <script>
