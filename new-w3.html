@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>bestm o v v v e</title>
+	<title>1tm o v v v e</title>
 	<!--<script>
 	
            
@@ -265,44 +265,103 @@ html {
 }
 </style>
 </head>
-<body background="/images/jumbotron/11g.gif">
-	<div class="footer">
-<div class="row">
-	<div class="col-1"></div>
-<div class="col-4" style="text-align: center">
-  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: white; font-size: 24px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Abel" color="white" style="text-align: right; text-decoration: none; font-size: 24px;">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	
-  </div>
-	<div class="col-1"></div>
-  
-  <div class="col-2" style="text-align: center; border-right: 1px solid">
-  <a href="https://jabzoo.github.io/jabzoo/activity1office.html"><i class="glyphicon glyphicon-repeat" style="font-size: 24px; color: white"></i></a>
-  </div>
-   <div class="col-2" style="text-align: center; border-right: 0px solid">
-    <span class="timer-loop" style="font-size: 24px; color: white; font-family: Abel"><span id="timer-minutes"><strong>1</strong></span><strong>:</strong><span id="timer-second"><strong>00</strong></span></a><br />
+<body>
+	 <div id="page-content-wrapper">
 
-  </div>
-   <div class="col-2" style="text-align: center;">
-  <!--<font style="font-size: 24px; color: white; font-family: Abel">twist</font>-->
-  </div>
-	<br />
 
-  </div>
-	</div>
-		<div class="bottomdiv">
-<marquee class="GeneratedMarquee" direction="left" scrollamount="9" behavior="scroll"><font style="font-family: Abel">High knees:  This is the information you need to know.</font></marquee>
-<br />
-			</div>
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
 
-<!--
-<script>
-    ChangebackgroundImage()
+
+            </div>
+
+<script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"https://jabzoo.github.io/jabzoo/activities/1.html",
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
 </script>
+  
+  <script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>
 	<script>
     setTimeout(function(){
        window.location.href = 'https://jabzoo.github.io/jabzoo/timer1office.html';
     }, 71000);
-</script>-->
+</script>
 </body>
 </html>
