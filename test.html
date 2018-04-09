@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>testv v e</title>
+	<title>ttttenm o v v v e</title>
 	<!--<script>
 	
            
@@ -324,29 +324,6 @@ svg circle {
     stroke-dashoffset: 113px;
   }
 }
-		
-		body{
-  font-family: 'Open Sans', sans-serif;
-  background: #1c222e;
-  padding: 30px;
-}
-.c-container {
-  position: relative;
-  width: 200px;
-  .c-text {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    line-height: 30px;
-    top: 50%;
-    margin-top: -15px;
-  }
-  svg {
-    width: 100%;
-  }
-}
 </style>
 </head>
 <body background="/images/jumbotron/workout1.gif">
@@ -388,20 +365,6 @@ svg circle {
   </svg>
 </div>
 
-<div class="c-container">
-    <div class="c-text"></div>
-    <svg id="yeah" viewbox="0 0 100 100">
-        <path id="bg" stroke-linecap="round" stroke-width="4" stroke="#212b37" fill="none" d="M50 2 
-           a 48 48 0 0 1 0 96 
-           a 48 48 0 0 1 0 -96">
-        </path>
-        <path id="progress" stroke-linecap="round" stroke-width="4" stroke="#7bdccd" fill="none" d="M50 2 
-           a 48 48 0 0 1 0 96 
-           a 48 48 0 0 1 0 -96">
-        </path>
-    </svg>
-</div>
-
 		<!--<div class="bottomdiv">
 <marquee class="GeneratedMarquee" direction="left" scrollamount="9" behavior="scroll" loop="1"><font style="font-family: Abel">High knees:  This is the information you need to know.</font></marquee>
 
@@ -437,86 +400,6 @@ setInterval(function() {
 
   countdownNumberEl.textContent = countdown;
 }, 1000);
-</script>
-<script>
-	class Util {
-    static convertMS(ms) {
-        var d, h, m, s;
-
-        s = Math.floor(ms / 1000);
-        m = Math.floor(s / 60);
-        s = s % 60;
-        h = Math.floor(m / 60);
-        m = m % 60;
-        d = Math.floor(h / 24);
-        h = h % 24;
-        return {
-            d: d,
-            h: h,
-            m: m,
-            s: s
-        };
-    };
-
-    static addZ(n) {
-        if (!n) return "00";
-        return (n < 10 ? '0' : '') + n;
-    }
-
-    static formatTime(obj) {
-        if (obj.d > 0) {
-            return Util.addZ(obj.d) + "D " + Util.addZ(obj.h) + "H";
-        }
-        if (obj.h > 0) {
-            return Util.addZ(obj.h) + "H " + Util.addZ(obj.m) + "M";
-        }
-        return Util.addZ(obj.m) + "M " + Util.addZ(obj.s) + "S";
-    }
-}
-
-class Countdown {
-    constructor(endTime, $element) {
-        this.now = moment();
-        this.end = moment().add(endTime);
-        this.diff = this.end.diff(this.now);
-        this.$el = $element;
-        this.svg = Snap(this.$el.find("svg")[0]);
-        this.progress = this.svg.select("#progress");
-        this.$txt = this.$el.find(".c-text");
-        this.initCircle();
-        this.initTimer();
-    }
-    
-    initCircle() {
-        var self = this;
-        self.progress.attr({
-            strokeDasharray: '0, 301.44'
-        });
-        Snap.animate(0, 301.44, function(value) {
-            self.progress.attr({
-                'stroke-dasharray': value + ', 301.44'
-            });
-        }, self.diff);
-    }
-    
-    initTimer() {
-        var self = this;
-        self.timer = setInterval(function() {
-            self.now = moment();
-            self.diff = self.end.diff(self.now);
-            if (self.diff > 0) {
-                self.$txt.text(Util.formatTime(Util.convertMS(self.diff)));
-            } else {
-                self.$txt.text();
-                clearInterval(self.timer);
-            }
-        }, 200);
-    }
-}
-
-$(function() {
-    var yeah = new Countdown({seconds: 60}, $(".c-container"));
-})
 </script>
 </body>
 </html>
