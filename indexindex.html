@@ -88,6 +88,15 @@ body {
     [class*="col-"] {
         width: 100%;
     }
+	.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
 </style>
 </head>
 <body>
