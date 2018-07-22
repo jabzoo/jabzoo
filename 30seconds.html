@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> o v v v e</title>
+    <title>m o v v v e</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
 <script src="https://use.fontawesome.com/0003867fec.js"></script>
@@ -99,11 +99,16 @@ body {
 }
 
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-	object-fit: none;
-	}
+/*  making the video fullscreen  */
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
 
 div.content {
     position: fixed;
