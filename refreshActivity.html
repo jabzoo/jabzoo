@@ -169,7 +169,9 @@ div.sampleOne {
 </div>
 	
 <div class="sampleOne">
-	<button onclick="playVid()" type="button">Play Video</button>
+	<p>
+	<button id="hide" onclick="playVid()" type="button">Play Video</button>
+	</p>
 </div>
 
 <script> 
@@ -208,6 +210,18 @@ function myFunction() {
 	<script>
 		<A HREF="javascript:history.go(0)">Click for a new activity</A>
 	</script>
+	
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+</script>
+	
 	
 </body>
 </html>
